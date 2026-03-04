@@ -11,934 +11,1010 @@ A curated semantic taxonomy of 60 film clusters derived from content-based analy
 **Silhouette Score**: 0.115 (low but semantically meaningful)  
 **Average Cluster Size**: 72 films  
 
-Cluster names were created through manual analysis of:
-- Top 10 highest-rated films per cluster
-- Genre distribution (most frequent genres)
-- Recurring themes from film descriptions
-- Tag patterns across cluster members
+**Note**: Cluster names were manually created and may not perfectly align with algorithmic groupings. The content-based clustering identifies films with similar genre/theme/tag patterns, which sometimes produces unexpected but semantically coherent groupings.
+
+---
+
+## Key Observations
+
+**Largest Clusters**:
+1. Cluster 13 (238 films) - Broad dramatic range
+2. Cluster 32 (171 films) - Powerful diverse dramas
+3. Cluster 4 (157 films) - Profound human dramas
+
+**Smallest Clusters**:
+1. Cluster 37 (18 films) - Intimate character studies
+2. Cluster 51 (28 films) - War and romantic dramas
+3. Cluster 57 (30 films) - Intense surreal dramas
+
+**Dominant Themes Across All Clusters**:
+- "Moving relationship stories" appears in 58/60 clusters
+- "Humanity and the world around us" appears in 55/60 clusters
+- Drama is the dominant genre in all clusters
+
+**Note**: The prevalence of "Drama" and "Moving relationship stories" suggests the dataset is heavily weighted toward serious, emotionally-driven cinema rather than pure action, horror, or comedy films.
+
+---
+
+## Usage in Recommendation System
+
+- **Diversity Control**: Maximum 3 films per cluster in recommendations
+- **Taste Mapping**: 2D t-SNE visualization of cluster space
+- **Similar Films**: Backend finds films from same/adjacent clusters
+- **Search-to-Rate**: Initial 5 films selected from top clusters near searched film
 
 ---
 
 ## Complete Cluster Taxonomy
 
-### **Cluster 0: Outlaws, Guns, and Redemption**
-Classic and neo-Westerns exploring morality, violence, and redemption in lawless frontiers.
+### **Cluster 0: Human Passion and Artistic Struggle**
+Epic dramas exploring human relationships and philosophical depth.
 
 **Representative Films**:
-- The Good, the Bad and the Ugly (1966)
-- Unforgiven (1992)
-- No Country for Old Men (2007)
-- True Grit (2010)
-- Django Unchained (2012)
-
-**Dominant Genres**: Western, Drama, Crime  
-**Key Themes**: Violence, Justice, Redemption
-
----
-
-### **Cluster 1: Passionate Dramas of the Heart**
-Intense romantic dramas exploring love, loss, and emotional transformation.
-
-**Representative Films**:
-- Blue Valentine (2010)
-- Revolutionary Road (2008)
-- Carol (2015)
-- Call Me by Your Name (2017)
-- The Notebook (2004)
-
-**Dominant Genres**: Romance, Drama  
-**Key Themes**: Love, Relationships, Heartbreak
-
----
-
-### **Cluster 2: Dark Comedy's Absurd Underbelly**
-Satirical and darkly comedic films that expose the absurdity of modern life.
-
-**Representative Films**:
-- Dr. Strangelove (1964)
-- In Bruges (2008)
-- The Lobster (2015)
-- Fargo (1996)
-- American Psycho (2000)
-
-**Dominant Genres**: Comedy, Drama, Thriller  
-**Key Themes**: Satire, Absurdism, Dark Humor
-
----
-
-### **Cluster 3: Stylized Violence and Vengeance**
-Visually striking films featuring choreographed violence and revenge narratives.
-
-**Representative Films**:
-- Kill Bill Vol. 1 (2003)
-- Oldboy (2003)
-- John Wick (2014)
-- The Raid (2011)
-- I Saw the Devil (2010)
-
-**Dominant Genres**: Action, Thriller, Crime  
-**Key Themes**: Revenge, Violence, Justice
-
----
-
-### **Cluster 4: Transgressive Class Conflict Thrillers**
-Provocative thrillers examining power dynamics and class warfare.
-
-**Representative Films**:
-- Parasite (2019)
-- Snowpiercer (2013)
-- The Platform (2019)
-- Us (2019)
-- Sorry to Bother You (2018)
-
-**Dominant Genres**: Thriller, Drama, Horror  
-**Key Themes**: Class Struggle, Inequality, Social Commentary
-
----
-
-### **Cluster 5: Political Reckoning Through Documentary**
-Non-fiction films exposing political corruption, war crimes, and systemic injustice.
-
-**Representative Films**:
-- 13th (2016)
-- The Act of Killing (2012)
-- Citizenfour (2014)
-- Bowling for Columbine (2002)
-- The Fog of War (2003)
-
-**Dominant Genres**: Documentary  
-**Key Themes**: Politics, War, Justice, Truth
-
----
-
-### **Cluster 6: Dark Horror Masterpieces**
-Terrifying horror films that push boundaries and explore deep fears.
-
-**Representative Films**:
-- The Exorcist (1973)
-- Hereditary (2018)
-- The Witch (2015)
-- Martyrs (2008)
-- Rosemary's Baby (1968)
-
-**Dominant Genres**: Horror, Thriller  
-**Key Themes**: Fear, Supernatural, Death
-
----
-
-### **Cluster 7: Profound Human Suffering and Grace**
-Deeply moving dramas about resilience, survival, and human dignity.
-
-**Representative Films**:
-- Schindler's List (1993)
-- The Pianist (2002)
-- Life is Beautiful (1997)
-- Grave of the Fireflies (1988)
-- Come and See (1985)
-
-**Dominant Genres**: Drama, War, History  
-**Key Themes**: War, Suffering, Hope, Humanity
-
----
-
-### **Cluster 8: Charming Comedies of the Heart**
-Lighthearted romantic comedies and feel-good films.
-
-**Representative Films**:
-- The Grand Budapest Hotel (2014)
-- Amélie (2001)
-- Paddington 2 (2017)
-- About Time (2013)
-- The Princess Bride (1987)
-
-**Dominant Genres**: Comedy, Romance, Adventure  
-**Key Themes**: Love, Joy, Friendship
-
----
-
-### **Cluster 9: Gritty Urban Crime Dramas**
-Raw, realistic portrayals of crime, poverty, and survival in urban environments.
-
-**Representative Films**:
-- City of God (2002)
-- Training Day (2001)
-- Gomorrah (2008)
-- A Prophet (2009)
-- The Wire (2002-2008)
-
-**Dominant Genres**: Crime, Drama, Thriller  
-**Key Themes**: Crime, Survival, Urban Life
-
----
-
-### **Cluster 10: Haunted Nightmares and Twisted Terrors**
-Psychological horror films featuring supernatural haunting and mind-bending terror.
-
-**Representative Films**:
-- The Shining (1980)
-- Eraserhead (1977)
-- Suspiria (1977)
-- Jacob's Ladder (1990)
-- Possession (1981)
-
-**Dominant Genres**: Horror, Thriller, Mystery  
-**Key Themes**: Madness, Haunting, Psychological Terror
-
----
-
-### **Cluster 11: Musical Comedy Adventures**
-Musicals and music-focused comedies celebrating joy and performance.
-
-**Representative Films**:
-- The Sound of Music (1965)
-- Singin' in the Rain (1952)
-- La La Land (2016)
-- The Umbrellas of Cherbourg (1964)
-- Whiplash (2014)
-
-**Dominant Genres**: Musical, Comedy, Drama  
-**Key Themes**: Music, Performance, Dreams
-
----
-
-### **Cluster 12: War's Human Cost**
-War films focusing on individual experiences and the psychological toll of conflict.
-
-**Representative Films**:
-- Apocalypse Now (1979)
-- Full Metal Jacket (1987)
-- Paths of Glory (1957)
-- Dunkirk (2017)
-- 1917 (2019)
-
-**Dominant Genres**: War, Drama, History  
-**Key Themes**: War, Trauma, Brotherhood
-
----
-
-### **Cluster 13: Profound Human Dramas**
-Character-driven dramas exploring the depths of human experience.
-
-**Representative Films**:
-- The Godfather (1972)
-- 12 Angry Men (1957)
-- The Shawshank Redemption (1994)
-- Casablanca (1942)
-- It's a Wonderful Life (1946)
-
-**Dominant Genres**: Drama  
-**Key Themes**: Justice, Redemption, Humanity
-
----
-
-### **Cluster 14: Romantic Comedy Delights**
-Classic and modern rom-coms celebrating love and laughter.
-
-**Representative Films**:
-- When Harry Met Sally (1989)
-- Roman Holiday (1953)
-- Groundhog Day (1993)
-- Before Sunrise (1995)
-- The Big Sick (2017)
-
-**Dominant Genres**: Romance, Comedy  
-**Key Themes**: Love, Relationships, Humor
-
----
-
-### **Cluster 15: Human Lives, Human Hearts**
-Intimate character studies of ordinary people facing extraordinary circumstances.
-
-**Representative Films**:
-- Manchester by the Sea (2016)
-- Ordinary People (1980)
-- The Farewell (2019)
-- A Separation (2011)
-- The Florida Project (2017)
-
-**Dominant Genres**: Drama  
-**Key Themes**: Family, Loss, Resilience
-
----
-
-### **Cluster 16: Dark Crime Mysteries**
-Noir-influenced crime films with complex mysteries and moral ambiguity.
-
-**Representative Films**:
-- L.A. Confidential (1997)
-- Chinatown (1974)
-- The Third Man (1949)
-- Memories of Murder (2003)
-- Zodiac (2007)
-
-**Dominant Genres**: Crime, Mystery, Thriller  
-**Key Themes**: Crime, Investigation, Corruption
-
----
-
-### **Cluster 17: Suspense and High-Stakes Intrigue**
-Edge-of-your-seat thrillers with intricate plots and mounting tension.
-
-**Representative Films**:
-- Rear Window (1954)
-- North by Northwest (1959)
-- The Wages of Fear (1953)
-- Uncut Gems (2019)
-- Good Time (2017)
-
-**Dominant Genres**: Thriller, Mystery, Crime  
-**Key Themes**: Suspense, Danger, Paranoia
-
----
-
-### **Cluster 18: Classic Comedy Gold**
-Timeless comedies that have defined the genre across decades.
-
-**Representative Films**:
-- Some Like It Hot (1959)
-- The General (1926)
+- Ran (1985)
+- Satantango (1994)
 - City Lights (1931)
-- Dr. Strangelove (1964)
-- The Big Lebowski (1998)
+- The Weeping Meadow (2004)
+- Das Boot (1981)
 
-**Dominant Genres**: Comedy  
-**Key Themes**: Humor, Satire, Wit
+**Size**: 76 films  
+**Dominant Genres**: Drama (65%), Comedy (25%), Thriller (21%)  
+**Key Themes**: Moving relationship stories, Humanity and the world around us, Heartbreak and suffering
 
 ---
 
-### **Cluster 19: Epic Sci-Fi Action Adventures**
-Large-scale science fiction films with spectacular action and world-building.
+### **Cluster 1: Undead Chaos and Dark Comedy**
+Emotionally complex dramas with moments of levity and darkness.
 
 **Representative Films**:
-- The Matrix (1999)
-- Inception (2010)
-- Blade Runner (2049)
-- Star Wars: Episode V (1980)
-- Terminator 2 (1991)
+- Life Is Beautiful (1997)
+- All That Jazz (1979)
+- Monster (2023)
+- The Celebration (1998)
+- Brief Encounter (1945)
 
-**Dominant Genres**: Sci-Fi, Action, Thriller  
-**Key Themes**: Technology, Reality, Future
+**Size**: 53 films  
+**Dominant Genres**: Drama (70%), Comedy (30%), Thriller (25%)  
+**Key Themes**: Moving relationship stories, Humanity and the world around us, Crude humor and satire
 
 ---
 
-### **Cluster 20: Moral Reckoning and Spiritual Struggle**
-Films exploring faith, morality, and the search for meaning.
+### **Cluster 2: Intimate Emotional Dramas of the Heart**
+Character-driven dramas with strong emotional cores and family dynamics.
 
 **Representative Films**:
-- Stalker (1979)
-- The Tree of Life (2011)
-- A Hidden Life (2019)
-- Silence (2016)
-- First Reformed (2017)
+- The Godfather Part II (1974)
+- Cinema Paradiso (1988)
+- The Passion of Joan of Arc (1928)
+- Farewell My Concubine (1993)
+- Singin' in the Rain (1952)
 
-**Dominant Genres**: Drama  
-**Key Themes**: Faith, Morality, Existentialism
+**Size**: 99 films  
+**Dominant Genres**: Drama (79%), Crime (20%), Comedy (17%)  
+**Key Themes**: Moving relationship stories, Humanity and the world around us, Family stories
 
 ---
 
-### **Cluster 21: Cinematic Meditations on Human Existence**
-Slow cinema and contemplative films exploring existence and perception.
+### **Cluster 3: Adrenaline-Fueled Action Spectacles**
+Thought-provoking dramas with philosophical and existential themes.
 
 **Representative Films**:
-- 2001: A Space Odyssey (1968)
-- Solaris (1972)
-- The Mirror (1975)
-- Under the Skin (2013)
-- The Master (2012)
+- Mishima: A Life in Four Chapters (1985)
+- My Night at Maud's (1969)
+- The Worst Person in the World (2021)
+- Kneecap (2024)
+- Encounters at the End of the World (2007)
 
-**Dominant Genres**: Drama, Sci-Fi  
-**Key Themes**: Existence, Consciousness, Time
+**Size**: 35 films  
+**Dominant Genres**: Drama (69%), Comedy (31%), Action (17%)  
+**Key Themes**: Moving relationship stories, Surreal visions, Transgression
 
 ---
 
-### **Cluster 22: Queer Desire and Emotional Awakening**
-LGBTQ+ cinema exploring identity, desire, and self-discovery.
+### **Cluster 4: Charming Hearts and Comic Tales**
+Profound human dramas exploring life's complexities and moral questions.
 
 **Representative Films**:
-- Portrait of a Lady on Fire (2019)
-- Moonlight (2016)
-- Brokeback Mountain (2005)
-- The Handmaiden (2016)
-- Weekend (2011)
+- Yi Yi (2000)
+- Shoah (1985)
+- Hoop Dreams (1994)
+- Princess Mononoke (1997)
+- The Seventh Seal (1957)
 
-**Dominant Genres**: Drama, Romance  
-**Key Themes**: Identity, Love, Desire
+**Size**: 157 films  
+**Dominant Genres**: Drama (66%), Comedy (28%), Thriller (19%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Family drama
 
 ---
 
-### **Cluster 23: Animated Wonder and Family Magic**
-Animated films that captivate audiences of all ages with heart and imagination.
+### **Cluster 5: Criminal Underworld Dramas**
+Intimate character studies of ordinary people and quiet emotional depth.
+
+**Representative Films**:
+- Nights of Cabiria (1957)
+- HOMECOMING: A film by Beyoncé (2019)
+- Still Walking (2008)
+- The Lives of Others (2006)
+- Umberto D. (1952)
+
+**Size**: 55 films  
+**Dominant Genres**: Drama (73%), Comedy (22%), Romance (20%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Family stories
+
+---
+
+### **Cluster 6: Dark Transgressive Thrillers**
+Artistic and visually distinctive dramas with romantic undertones.
+
+**Representative Films**:
+- Persona (1966)
+- In the Mood for Love (2000)
+- Where Is the Friend's House? (1987)
+- Dreams (1990)
+- On the Waterfront (1954)
+
+**Size**: 78 films  
+**Dominant Genres**: Drama (54%), Comedy (24%), Romance (23%)  
+**Key Themes**: Moving relationship stories, Crude humor and satire, Psychological thriller
+
+---
+
+### **Cluster 7: Outlaws, Dust, and Redemption**
+Tender family dramas and relationship-focused narratives.
+
+**Representative Films**:
+- Autumn Sonata (1978)
+- The Gleaners and I (2000)
+- Make Way for Tomorrow (1937)
+- Unforgiven (1992)
+- North by Northwest (1959)
+
+**Size**: 98 films  
+**Dominant Genres**: Drama (66%), Comedy (24%), Romance (24%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Family stories
+
+---
+
+### **Cluster 8: Humanity's Reckoning with War**
+Fantasy and romantic dramas with emotional depth.
 
 **Representative Films**:
 - Spirited Away (2001)
-- Toy Story (1995)
-- WALL-E (2008)
-- Inside Out (2015)
-- The Lion King (1994)
+- Fanny and Alexander (1982)
+- Ali: Fear Eats the Soul (1974)
+- Anatomy of a Fall (2023)
+- Orpheus (1950)
 
-**Dominant Genres**: Animation, Family, Adventure  
-**Key Themes**: Friendship, Adventure, Growth
+**Size**: 43 films  
+**Dominant Genres**: Drama (70%), Romance (33%), Comedy (26%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Romance
 
 ---
 
-### **Cluster 24: Coming of Age Emotional Dramas**
-Stories of adolescence, identity formation, and the transition to adulthood.
+### **Cluster 9: Profound Human Journeys**
+Morally complex dramas exploring justice and human nature.
 
 **Representative Films**:
+- High and Low (1963)
+- Schindler's List (1993)
+- The Apartment (1960)
+- Inglourious Basterds (2009)
+- Life, and Nothing More… (1992)
+
+**Size**: 71 films  
+**Dominant Genres**: Drama (70%), Comedy (25%), Romance (25%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Heartbreak and suffering
+
+---
+
+### **Cluster 10: Comedic Brilliance and Satirical Wit**
+Intense dramatic works exploring violence, humanity, and moral complexity.
+
+**Representative Films**:
+- The Human Condition II: Road to Eternity (1959)
+- O.J.: Made in America (2016)
+- Paths of Glory (1957)
+- Oldboy (2003)
 - The 400 Blows (1959)
-- Boyhood (2014)
-- Lady Bird (2017)
+
+**Size**: 142 films  
+**Dominant Genres**: Drama (71%), Comedy (25%), Thriller (18%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Violence and transgression
+
+---
+
+### **Cluster 11: Transgressive Class Conflict Thrillers**
+War films and coming-of-age stories with romantic elements.
+
+**Representative Films**:
+- Apocalypse Now (1979)
+- Nobody Knows (2004)
+- Before Sunrise (1995)
+- The Deer Hunter (1978)
 - Stand by Me (1986)
-- Eighth Grade (2018)
 
-**Dominant Genres**: Drama  
-**Key Themes**: Youth, Identity, Growing Up
-
----
-
-### **Cluster 25: Heroic Adventures With a Laugh**
-Action-adventure films balancing excitement with humor and heart.
-
-**Representative Films**:
-- Raiders of the Lost Ark (1981)
-- The Mummy (1999)
-- Guardians of the Galaxy (2014)
-- Spider-Man: Into the Spider-Verse (2018)
-- Mad Max: Fury Road (2015)
-
-**Dominant Genres**: Adventure, Action, Comedy  
-**Key Themes**: Adventure, Heroism, Friendship
+**Size**: 50 films  
+**Dominant Genres**: Drama (60%), Comedy (32%), Romance (24%)  
+**Key Themes**: Moving relationship stories, Violence and transgression, Crude humor
 
 ---
 
-### **Cluster 26: Humanity's Journey Beyond Earth**
-Cerebral science fiction exploring space, time, and humanity's place in the universe.
+### **Cluster 12: The Art of Making Music**
+Dark, psychologically complex dramas with crime elements.
 
 **Representative Films**:
-- Interstellar (2014)
-- The Martian (2015)
-- Arrival (2016)
-- Gravity (2013)
-- First Man (2018)
-
-**Dominant Genres**: Sci-Fi, Drama, Thriller  
-**Key Themes**: Space, Science, Survival
-
----
-
-### **Cluster 27: Dark Psychological Surrealism**
-Mind-bending films that blur reality and nightmare.
-
-**Representative Films**:
-- Mulholland Drive (2001)
-- Requiem for a Dream (2000)
-- Black Swan (2010)
 - Perfect Blue (1997)
-- mother! (2017)
+- Three Colours: Red (1994)
+- Underground (1995)
+- Throne of Blood (1957)
+- The Turin Horse (2011)
 
-**Dominant Genres**: Thriller, Drama, Horror  
-**Key Themes**: Madness, Reality, Obsession
+**Size**: 62 films  
+**Dominant Genres**: Drama (74%), Crime (29%), Thriller (23%)  
+**Key Themes**: Moving relationship stories, Heartbreak and suffering, Humanity and the world
 
 ---
 
-### **Cluster 28: Dark Mysteries and Crime Thrillers**
-Psychological thrillers with serial killers, detectives, and moral complexity.
+### **Cluster 13: Profound Family Heartbreak and Humanity**
+The largest cluster: diverse dramas with broad thematic range.
 
 **Representative Films**:
-- Se7en (1995)
+- The Ascent (1977)
+- Red Beard (1965)
+- All About Eve (1950)
+- Dead Poets Society (1989)
 - The Silence of the Lambs (1991)
-- Prisoners (2013)
-- Zodiac (2007)
-- Gone Girl (2014)
 
-**Dominant Genres**: Thriller, Crime, Mystery  
-**Key Themes**: Crime, Investigation, Psychology
+**Size**: 238 films (largest cluster)  
+**Dominant Genres**: Drama (62%), Comedy (27%), Thriller (21%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Crude humor and satire
 
 ---
 
-### **Cluster 29: Intimate Dramas of Desire and Loss**
-Emotional dramas exploring love, loneliness, and human connection.
+### **Cluster 14: Darkly Gripping Crime Mysteries**
+Emotionally charged dramas with horror and supernatural elements.
 
 **Representative Films**:
-- In the Mood for Love (2000)
-- Brief Encounter (1945)
-- Blue Is the Warmest Color (2013)
-- The Age of Innocence (1993)
-- The Remains of the Day (1993)
+- A Woman Under the Influence (1974)
+- Witness for the Prosecution (1957)
+- La Commune (Paris, 1871) (2000)
+- Kwaidan (1964)
+- Eternal Sunshine of the Spotless Mind (2004)
 
-**Dominant Genres**: Drama, Romance  
-**Key Themes**: Desire, Longing, Regret
+**Size**: 48 films  
+**Dominant Genres**: Drama (69%), Romance (25%), Horror (21%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Horror
 
 ---
 
-### **Cluster 30: Intimate Portraits of Human Longing**
-Quiet character studies of isolation, connection, and yearning.
+### **Cluster 15: Whimsical Family Adventures**
+Serious dramas exploring human suffering and social issues.
 
 **Representative Films**:
-- Her (2013)
-- Lost in Translation (2003)
-- Paterson (2016)
-- The Before Trilogy (1995-2013)
-- Columbus (2017)
+- The Human Condition III: A Soldier's Prayer (1961)
+- Rififi (1955)
+- David Byrne's American Utopia (2020)
+- Poetry (2010)
+- 12 Years a Slave (2013)
 
-**Dominant Genres**: Drama, Romance  
-**Key Themes**: Loneliness, Connection, Love
+**Size**: 65 films  
+**Dominant Genres**: Drama (72%), Comedy (28%), Romance (17%)  
+**Key Themes**: Moving relationship stories, Crude humor and satire, Family stories
 
 ---
 
-### **Cluster 31: Violent Crime and Moral Corruption**
-Hard-boiled crime films exploring criminal underworlds and ethical decay.
+### **Cluster 16: War's Human Tragedy**
+Artistic dramas with thriller and adventure elements.
 
 **Representative Films**:
-- Goodfellas (1990)
-- Scarface (1983)
-- The Departed (2006)
-- Heat (1995)
-- Casino (1995)
-
-**Dominant Genres**: Crime, Thriller, Drama  
-**Key Themes**: Crime, Power, Corruption
-
----
-
-### **Cluster 32: Celebrating the Artist's Soul**
-Films about artists, musicians, and the creative process.
-
-**Representative Films**:
+- Eternity and a Day (1998)
 - Amadeus (1984)
-- The Red Shoes (1948)
-- La La Land (2016)
-- Birdman (2014)
-- All That Jazz (1979)
+- The Prestige (2006)
+- Sorcerer (1977)
+- Moonlight (2016)
 
-**Dominant Genres**: Drama, Musical, Biography  
-**Key Themes**: Art, Creativity, Passion
-
----
-
-### **Cluster 33: Adrenaline-Fueled Crime Thrillers**
-High-octane action films centered on heists, chases, and criminal operations.
-
-**Representative Films**:
-- Drive (2011)
-- Baby Driver (2017)
-- The Bourne Identity (2002)
-- The Town (2010)
-- Sicario (2015)
-
-**Dominant Genres**: Action, Crime, Thriller  
-**Key Themes**: Action, Crime, Suspense
+**Size**: 47 films  
+**Dominant Genres**: Drama (70%), Thriller (21%), Adventure (21%)  
+**Key Themes**: Humanity and the world, Moving relationship stories, Surreal visions
 
 ---
 
-### **Cluster 34: Political Consciousness and Resistance**
-Films exploring political awakening, activism, and social justice.
+### **Cluster 17: Emotional Stories of Human Struggle**
+Mixed dramas with comedic and dark elements.
 
 **Representative Films**:
-- The Battle of Algiers (1966)
-- Z (1969)
-- Selma (2014)
+- The Human Condition I: No Greater Love (1959)
+- Spider-Man: Across the Spider-Verse (2023)
+- Twin Peaks: Fire Walk with Me (1992)
+- The Iron Giant (1999)
+- Napoleon (1927)
+
+**Size**: 78 films  
+**Dominant Genres**: Drama (54%), Comedy (24%), Romance (19%)  
+**Key Themes**: Crude humor and satire, Moving relationship stories, Violence and transgression
+
+---
+
+### **Cluster 18: Spiritual Reckoning and Human Mortality**
+Character-driven dramas about passion and human connection.
+
+**Representative Films**:
+- Whiplash (2014)
 - Do the Right Thing (1989)
+- Dersu Uzala (1975)
+- Chungking Express (1994)
+- The Life and Death of Colonel Blimp (1943)
+
+**Size**: 63 films  
+**Dominant Genres**: Drama (67%), Romance (25%), Comedy (25%)  
+**Key Themes**: Moving relationship stories, Heartbreak and suffering, Humanity and the world
+
+---
+
+### **Cluster 19: Dark Psychological Horror Visions**
+Varied dramas with thriller and adventure elements.
+
+**Representative Films**:
+- Spider-Man: Into the Spider-Verse (2018)
+- Mirror (1975)
+- Tokyo Twilight (1957)
+- For a Few Dollars More (1965)
+- Sunrise: A Song of Two Humans (1927)
+
+**Size**: 53 films  
+**Dominant Genres**: Drama (62%), Thriller (30%), Adventure (21%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Family drama
+
+---
+
+### **Cluster 20: Animated Enchantment and Wonder**
+Moral and philosophical dramas exploring justice and violence.
+
+**Representative Films**:
+- Stalker (1979)
+- Judgment at Nuremberg (1961)
+- A Special Day (1977)
+- Dog Day Afternoon (1975)
+- The Man Who Shot Liberty Valance (1962)
+
+**Size**: 109 films  
+**Dominant Genres**: Drama (67%), Comedy (27%), Thriller (23%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Violence and transgression
+
+---
+
+### **Cluster 21: Gritty Crime and Moral Conflict**
+Intimate dramas with crime elements and moral complexity.
+
+**Representative Films**:
+- Le Trou (1960)
+- The Beaches of Agnès (2008)
+- Perfect Days (2023)
+- Shoplifters (2018)
+- Kagemusha (1980)
+
+**Size**: 90 films  
+**Dominant Genres**: Drama (64%), Comedy (29%), Crime (24%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Violence and transgression
+
+---
+
+### **Cluster 22: Quirky Coming-of-Age Comedies**
+Comedic dramas with romantic elements.
+
+**Representative Films**:
+- Paris Is Burning (1990)
+- Dune: Part Two (2024)
+- Ordet (1955)
+- No Country for Old Men (2007)
+- The Shop on Main Street (1965)
+
+**Size**: 61 films  
+**Dominant Genres**: Drama (69%), Comedy (39%), Romance (28%)  
+**Key Themes**: Moving relationship stories, Crude humor and satire, Relationship comedy
+
+---
+
+### **Cluster 23: Surreal Minds Bending Reality**
+Comedic dramas with absurdist and satirical elements.
+
+**Representative Films**:
+- Landscape in the Mist (1988)
+- Swing Girls (2004)
+- Raise the Red Lantern (1991)
+- Tampopo (1985)
+- Children of Paradise (1945)
+
+**Size**: 40 films  
+**Dominant Genres**: Drama (58%), Comedy (25%), Thriller (25%)  
+**Key Themes**: Moving relationship stories, Crude humor and satire, Gags
+
+---
+
+### **Cluster 24: Intimate Dramas of Human Suffering**
+Varied dramas exploring humanity and relationships.
+
+**Representative Films**:
+- The Young Girls of Rochefort (1967)
+- Werckmeister Harmonies (2000)
+- Ugetsu (1953)
+- Saving Private Ryan (1998)
+- The Sting (1973)
+
+**Size**: 70 films  
+**Dominant Genres**: Drama (66%), Comedy (29%), Thriller (23%)  
+**Key Themes**: Humanity and the world, Moving relationship stories, Crude humor and satire
+
+---
+
+### **Cluster 25: Mysteries of the Human Psyche**
+Thrillers and action films with dramatic elements.
+
+**Representative Films**:
+- Night and Fog (1956)
+- Z (1969)
+- Amélie (2001)
+- The Matrix (1999)
+- Raiders of the Lost Ark (1981)
+
+**Size**: 42 films  
+**Dominant Genres**: Drama (36%), Thriller (33%), Comedy (33%)  
+**Key Themes**: Moving relationship stories, High speed and special ops, Humanity and the world
+
+---
+
+### **Cluster 26: Surreal Dreams of Human Experience**
+Philosophical dramas about mortality and human existence.
+
+**Representative Films**:
+- As I Was Moving Ahead, Occasionally I Saw Brief Glimpses of Beauty (2000)
+- Sing Sing (2023)
+- The Father (2020)
+- Double Indemnity (1944)
+- Magnolia (1999)
+
+**Size**: 102 films  
+**Dominant Genres**: Drama (65%), Comedy (23%), Romance (22%)  
+**Key Themes**: Humanity and the world, Moving relationship stories, Heartbreak and suffering
+
+---
+
+### **Cluster 27: Political Power and Corruption**
+Emotionally powerful dramas with satirical elements.
+
+**Representative Films**:
+- It's Such a Beautiful Day (2012)
+- Dancer in the Dark (2000)
+- Au Revoir les Enfants (1987)
+- Day for Night (1973)
+- Faces Places (2017)
+
+**Size**: 80 films  
+**Dominant Genres**: Drama (55%), Comedy (33%), Thriller (16%)  
+**Key Themes**: Moving relationship stories, Heartbreak and suffering, Crude humor and satire
+
+---
+
+### **Cluster 28: Intimate Truths of Human Struggle**
+Dramatic comedies exploring human nature and society.
+
+**Representative Films**:
+- One Flew Over the Cuckoo's Nest (1975)
+- Se7en (1995)
+- To Be or Not to Be (1942)
 - Malcolm X (1992)
+- Devils on the Doorstep (2000)
 
-**Dominant Genres**: Drama, History, Biography  
-**Key Themes**: Politics, Justice, Resistance
-
----
-
-### **Cluster 35: Intimate Dramas of the Heart**
-Small-scale emotional dramas about relationships and personal growth.
-
-**Representative Films**:
-- Marriage Story (2019)
-- Kramer vs. Kramer (1979)
-- Blue Valentine (2010)
-- The Squid and the Whale (2005)
-- 45 Years (2015)
-
-**Dominant Genres**: Drama, Romance  
-**Key Themes**: Relationships, Divorce, Growth
+**Size**: 61 films  
+**Dominant Genres**: Drama (62%), Comedy (31%), Romance (25%)  
+**Key Themes**: Moving relationship stories, Crude humor and satire, Humanity and the world
 
 ---
 
-### **Cluster 36: Existential Poetry in Motion**
-Philosophical films exploring meaning, existence, and the human condition.
+### **Cluster 29: Haunted Shadows and Spectral Dread**
+Crime dramas and romantic comedies.
 
 **Representative Films**:
-- Wild Strawberries (1957)
-- The Seventh Seal (1957)
-- Ikiru (1952)
-- Tokyo Story (1953)
-- Three Colors: Blue (1993)
+- The Godfather (1972)
+- Before Sunset (2004)
+- The Hunt (2012)
+- The Devils (1971)
+- Comrades, Almost a Love Story (1996)
 
-**Dominant Genres**: Drama  
-**Key Themes**: Existence, Death, Meaning
+**Size**: 73 films  
+**Dominant Genres**: Drama (62%), Comedy (34%), Romance (26%)  
+**Key Themes**: Moving relationship stories, Crude humor and satire, Humanity and the world
 
 ---
 
-### **Cluster 37: Spiritual Reckoning and Divine Grace**
-Religious and spiritual films exploring faith, doubt, and transcendence.
+### **Cluster 30: Musical Joy and Romance**
+Tense dramas and thrillers with violent elements.
 
 **Representative Films**:
-- The Passion of Joan of Arc (1928)
+- Once Upon a Time in the West (1968)
+- The Wages of Fear (1953)
+- Minding the Gap (2018)
+- Solaris (1972)
+- F for Fake (1973)
+
+**Size**: 78 films  
+**Dominant Genres**: Drama (63%), Comedy (26%), Thriller (24%)  
+**Key Themes**: Moving relationship stories, Violence and transgression, Heartbreak and suffering
+
+---
+
+### **Cluster 31: High-Stakes Tension and Intrigue**
+Diverse dramas exploring humanity and suffering.
+
+**Representative Films**:
+- Psycho (1960)
+- The King of Comedy (1982)
+- A Moment of Innocence (1996)
+- The Grapes of Wrath (1940)
+- My Neighbor Totoro (1988)
+
+**Size**: 41 films  
+**Dominant Genres**: Drama (63%), Comedy (34%), Romance (17%)  
+**Key Themes**: Humanity and the world, Moving relationship stories, Heartbreak and suffering
+
+---
+
+### **Cluster 32: Psychological Horror Masterpieces**
+The second-largest cluster: diverse powerful dramas.
+
+**Representative Films**:
+- The Shawshank Redemption (1994)
+- The Battle of Algiers (1966)
+- Incendies (2010)
+- The Lord of the Rings: The Fellowship of the Ring (2001)
+- Senna (2010)
+
+**Size**: 171 films (second-largest)  
+**Dominant Genres**: Drama (56%), Comedy (23%), Thriller (21%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Heartbreak and suffering
+
+---
+
+### **Cluster 33: Epic Heroic Adventures**
+Science fiction and fantasy adventures with comedy.
+
+**Representative Films**:
+- Paper Moon (1973)
+- Sherlock Jr. (1924)
+- Star Wars (1977)
+- Vampire Hunter D: Bloodlust (2000)
+- Brazil (1985)
+
+**Size**: 40 films  
+**Dominant Genres**: Drama (43%), Comedy (35%), Science Fiction (25%)  
+**Key Themes**: Moving relationship stories, Crude humor and satire, Gags
+
+---
+
+### **Cluster 34: Cosmic Horror and Alien Encounters**
+Philosophical dramas with surreal elements.
+
+**Representative Films**:
+- The Good, the Bad and the Ugly (1966)
+- It's a Wonderful Life (1946)
+- Portrait of a Lady on Fire (2019)
+- Love Exposure (2008)
+- For Sama (2019)
+
+**Size**: 41 films  
+**Dominant Genres**: Drama (61%), Comedy (29%), Romance (29%)  
+**Key Themes**: Humanity and the world, Moving relationship stories, Surreal visions
+
+---
+
+### **Cluster 35: Comedic Action and Physical Humor**
+Crime dramas with emotional depth.
+
+**Representative Films**:
+- Dear Zachary: A Letter to a Son About His Father (2008)
+- An Elephant Sitting Still (2018)
+- Good Will Hunting (1997)
+- World of Tomorrow (2015)
+- Samsara (2011)
+
+**Size**: 64 films  
+**Dominant Genres**: Drama (64%), Crime (27%), Comedy (27%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Violence and transgression
+
+---
+
+### **Cluster 36: Triumph Against All Odds**
+Socially conscious thrillers and crime dramas.
+
+**Representative Films**:
+- Parasite (2019)
+- Howl's Moving Castle (2004)
+- Fireworks (1997)
+- The Thin Blue Line (1988)
+- House of Hummingbird (2018)
+
+**Size**: 36 films  
+**Dominant Genres**: Drama (69%), Thriller (22%), Crime (22%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Crime
+
+---
+
+### **Cluster 37: Documenting Justice and Resistance**
+Intimate character studies and relationship dramas.
+
+**Representative Films**:
+- Joint Security Area (2000)
+- Ivan's Childhood (1962)
+- What Ever Happened to Baby Jane? (1962)
+- Ghost Dog: The Way of the Samurai (1999)
+- Babette's Feast (1987)
+
+**Size**: 18 films (smallest cluster)  
+**Dominant Genres**: Drama (78%), Romance (22%), Action (22%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Crude humor and satire
+
+---
+
+### **Cluster 38: War's Moral Reckoning**
+Morally complex dramas exploring violence and family.
+
+**Representative Films**:
+- There Will Be Blood (2007)
+- The Cranes Are Flying (1957)
+- Late Spring (1949)
+- La Notte (1961)
+- The Cremator (1969)
+
+**Size**: 54 films  
+**Dominant Genres**: Drama (69%), Comedy (30%), Romance (28%)  
+**Key Themes**: Humanity and the world, Violence and transgression, Family drama
+
+---
+
+### **Cluster 39: Intimate Stories of Desire**
+Epic and emotionally powerful dramas.
+
+**Representative Films**:
+- The Empire Strikes Back (1980)
+- The White Ribbon (2009)
+- The Long Goodbye (1973)
+- Turtles Can Fly (2004)
+- The Leopard (1963)
+
+**Size**: 92 films  
+**Dominant Genres**: Drama (64%), Comedy (23%), Romance (16%)  
+**Key Themes**: Moving relationship stories, Heartbreak and suffering, Family drama
+
+---
+
+### **Cluster 40: Transgressive Human Drama**
+Intense dramas exploring violence and humanity.
+
+**Representative Films**:
+- Come and See (1985)
+- Sansho the Bailiff (1954)
+- Paris, Texas (1984)
+- Fantastic Mr. Fox (2009)
+- Casablanca (1942)
+
+**Size**: 94 films  
+**Dominant Genres**: Drama (60%), Comedy (23%), Romance (20%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Violence and transgression
+
+---
+
+### **Cluster 41: Coming-of-Age Human Dramas**
+Character-driven relationship dramas.
+
+**Representative Films**:
+- Scenes from a Marriage (1974)
+- Chinatown (1974)
+- The Treasure of the Sierra Madre (1948)
+- Whisper of the Heart (1995)
+- Synecdoche, New York (2008)
+
+**Size**: 89 films  
+**Dominant Genres**: Drama (72%), Comedy (25%), Romance (19%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Heartbreak and suffering
+
+---
+
+### **Cluster 42: Epic Science Fiction Adventures**
+Philosophical and emotionally intense dramas.
+
+**Representative Films**:
+- Memories of Murder (2003)
+- 2001: A Space Odyssey (1968)
+- Amour (2012)
+- The Rocky Horror Picture Show (1975)
+- Fruitvale Station (2013)
+
+**Size**: 47 films  
+**Dominant Genres**: Drama (72%), Comedy (21%), Romance (19%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Heartbreak and suffering
+
+---
+
+### **Cluster 43: Urban Crime and Social Decay**
+Dramas exploring humanity and social issues.
+
+**Representative Films**:
+- Harakiri (1962)
+- La Haine (1995)
+- I Am Cuba (1964)
+- Interstellar (2014)
+- The Red Shoes (1948)
+
+**Size**: 81 films  
+**Dominant Genres**: Drama (69%), Comedy (24%), Romance (21%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Crude humor and satire
+
+---
+
+### **Cluster 44: Guns, Grit, and Glory**
+Family-centered dramas with emotional depth.
+
+**Representative Films**:
+- Grave of the Fireflies (1988)
+- Apur Sansar (1959)
+- Akira (1988)
+- Back to the Future (1985)
+- Good Morning (1959)
+
+**Size**: 60 films  
+**Dominant Genres**: Drama (68%), Comedy (27%), Romance (20%)  
+**Key Themes**: Moving relationship stories, Family drama, Humanity and the world
+
+---
+
+### **Cluster 45: Humanity's Poetic Documentary Journey**
+Artistic and surreal dramatic works.
+
+**Representative Films**:
+- The Pianist (2002)
+- Time of the Gypsies (1988)
+- The Cook, the Thief, His Wife & Her Lover (1989)
+- Spring, Summer, Fall, Winter... and Spring (2003)
+- Adaptation. (2002)
+
+**Size**: 45 films  
+**Dominant Genres**: Drama (67%), Crime (20%), Thriller (18%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Surreal visions
+
+---
+
+### **Cluster 46: Epic Fantasy Adventures**
+Action-driven crime dramas.
+
+**Representative Films**:
+- City of God (2002)
+- Cure (1997)
+- Human (2015)
+- Ulysses' Gaze (1995)
+- Mustang (2015)
+
+**Size**: 39 films  
+**Dominant Genres**: Drama (51%), Action (26%), Crime (23%)  
+**Key Themes**: Epic heroes, Moving relationship stories, Humanity and the world
+
+---
+
+### **Cluster 47: Humanity's Cosmic Reckoning**
+Epic human dramas with historical and philosophical depth.
+
+**Representative Films**:
+- Seven Samurai (1954)
+- The Great Dictator (1940)
+- To Live (1994)
+- La Belle Noiseuse (1991)
+- Marketa Lazarovà (1967)
+
+**Size**: 46 films  
+**Dominant Genres**: Drama (63%), Comedy (26%), Action (13%)  
+**Key Themes**: Humanity and the world, Moving relationship stories, Heartbreak and suffering
+
+---
+
+### **Cluster 48: Epic Historical Dramas**
+Dark psychological thrillers with intense themes.
+
+**Representative Films**:
+- The Handmaiden (2016)
+- Harlan County U.S.A. (1976)
+- 4 Months, 3 Weeks and 2 Days (2007)
+- Quo Vadis, Aida? (2020)
+- Embrace of the Serpent (2015)
+
+**Size**: 47 films  
+**Dominant Genres**: Drama (66%), Thriller (28%), Comedy (28%)  
+**Key Themes**: Heartbreak and suffering, Moving relationship stories, Psychological thriller
+
+---
+
+### **Cluster 49: Timeless Romance and Human Connection**
+Diverse dramas exploring justice and human struggle.
+
+**Representative Films**:
+- 12 Angry Men (1957)
+- A Brighter Summer Day (1991)
+- Central Station (1998)
+- Heat (1995)
+- Ritual (2000)
+
+**Size**: 79 films  
+**Dominant Genres**: Drama (68%), Comedy (34%), Action (19%)  
+**Key Themes**: Humanity and the world, Moving relationship stories, Heartbreak and suffering
+
+---
+
+### **Cluster 50: Passionate Tales of the Heart**
+Emotionally intense family dramas.
+
+**Representative Films**:
+- Neon Genesis Evangelion: The End of Evangelion (1997)
+- The Look of Silence (2014)
+- Eureka (2000)
+- Evangelion: 3.0+1.0 Thrice Upon a Time (2021)
+- All the Beauty and the Bloodshed (2022)
+
+**Size**: 76 films  
+**Dominant Genres**: Drama (70%), Thriller (25%), Comedy (24%)  
+**Key Themes**: Moving relationship stories, Family stories, Heartbreak and suffering
+
+---
+
+### **Cluster 51: Heroic Comedy Adventures**
+War and romantic dramas with emotional weight.
+
+**Representative Films**:
+- Full Metal Jacket (1987)
+- Forrest Gump (1994)
+- Pretty Village, Pretty Flame (1996)
+- Kiki's Delivery Service (1989)
+- Redline (2009)
+
+**Size**: 28 films  
+**Dominant Genres**: Drama (68%), Romance (29%), Action (21%)  
+**Key Themes**: Moving relationship stories, Family stories, Heartbreak and suffering
+
+---
+
+### **Cluster 52: Witty Romance and Comic Adventures**
+The third-largest cluster: profound human dramas.
+
+**Representative Films**:
+- No Other Land (2024)
+- The Lord of the Rings: The Return of the King (2003)
+- Woman in the Dunes (1964)
 - Andrei Rublev (1966)
-- Breaking the Waves (1996)
-- The Last Temptation of Christ (1988)
-- The Gospel According to St. Matthew (1964)
+- Tokyo Story (1953)
 
-**Dominant Genres**: Drama, History  
-**Key Themes**: Faith, Spirituality, Sacrifice
+**Size**: 132 films (third-largest)  
+**Dominant Genres**: Drama (65%), Comedy (25%), Romance (22%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Heartbreak and suffering
 
 ---
 
-### **Cluster 38: Transgressive Desire and Moral Reckoning**
-Provocative films exploring taboo subjects and moral boundaries.
+### **Cluster 53: Intimate Stories of the Heart**
+Dramas exploring mortality and existential questions.
 
 **Representative Films**:
-- Blue Velvet (1986)
-- Eyes Wide Shut (1999)
-- The Piano Teacher (2001)
-- Lolita (1962)
-- The Night Porter (1974)
+- Ikiru (1952)
+- GoodFellas (1990)
+- M (1931)
+- Terminator 2: Judgment Day (1991)
+- Mulholland Drive (2001)
 
-**Dominant Genres**: Drama, Thriller  
-**Key Themes**: Desire, Transgression, Morality
+**Size**: 64 films  
+**Dominant Genres**: Drama (73%), Comedy (23%), Crime (22%)  
+**Key Themes**: Humanity and the world, Moving relationship stories, Heartbreak and suffering
 
 ---
 
-### **Cluster 39: Youthful Rebellion and Laughs**
-Teen comedies and coming-of-age films celebrating rebellion and friendship.
+### **Cluster 54: Intimate Portraits of Human Suffering**
+Character studies exploring human nature and suffering.
 
 **Representative Films**:
-- Dazed and Confused (1993)
-- The Breakfast Club (1985)
-- Superbad (2007)
-- Fast Times at Ridgemont High (1982)
-- Rushmore (1998)
+- Sunset Boulevard (1950)
+- The Thing (1982)
+- Django Unchained (2012)
+- Taste of Cherry (1997)
+- Man with a Movie Camera (1929)
 
-**Dominant Genres**: Comedy, Drama  
-**Key Themes**: Youth, Rebellion, Friendship
+**Size**: 80 films  
+**Dominant Genres**: Drama (69%), Comedy (34%), Romance (18%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Heartbreak and suffering
 
 ---
 
-### **Cluster 40: Epic Tales of Human Destiny**
-Sweeping historical epics about fate, honor, and legacy.
+### **Cluster 55: Moral Reckoning and Social Justice**
+Visually striking dramas with violent and moral themes.
 
 **Representative Films**:
 - Lawrence of Arabia (1962)
-- Ben-Hur (1959)
-- The Last Emperor (1987)
-- Ran (1985)
-- Seven Samurai (1954)
+- Bicycle Thieves (1948)
+- The Night of the Hunter (1955)
+- The Holdovers (2023)
+- Black Swan (2010)
 
-**Dominant Genres**: Drama, History, Adventure  
-**Key Themes**: Destiny, Honor, War
-
----
-
-### **Cluster 41: Righteous Struggle Against Injustice**
-Legal dramas and courtroom films about truth and justice.
-
-**Representative Films**:
-- To Kill a Mockingbird (1962)
-- 12 Angry Men (1957)
-- A Few Good Men (1992)
-- The Verdict (1982)
-- Anatomy of a Murder (1959)
-
-**Dominant Genres**: Drama, Crime  
-**Key Themes**: Justice, Law, Truth
+**Size**: 55 films  
+**Dominant Genres**: Drama (62%), Comedy (24%), Thriller (22%)  
+**Key Themes**: Moving relationship stories, Violence and transgression, Humanity and the world
 
 ---
 
-### **Cluster 42: Whimsical Fantasy Adventures**
-Imaginative fantasy films filled with wonder and magic.
+### **Cluster 56: Noir Mysteries and Crime Thrillers**
+Another large cluster: diverse dramas and thrillers.
 
 **Representative Films**:
-- The Wizard of Oz (1939)
-- Pan's Labyrinth (2006)
-- The Shape of Water (2017)
-- Big Fish (2003)
-- Edward Scissorhands (1990)
+- Close-Up (1990)
+- Rear Window (1954)
+- The Departed (2006)
+- Koyaanisqatsi (1982)
+- 13th (2016)
 
-**Dominant Genres**: Fantasy, Adventure, Drama  
-**Key Themes**: Magic, Wonder, Imagination
+**Size**: 132 films (tied for third-largest)  
+**Dominant Genres**: Drama (55%), Comedy (25%), Thriller (24%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Heartbreak and suffering
 
 ---
 
-### **Cluster 43: Cerebral Mind Games**
-Intelligent thrillers built on psychological manipulation and puzzle-solving.
+### **Cluster 57: Musical Comedy and Satire**
+Intense dramas with surreal and violent elements.
 
 **Representative Films**:
-- The Prestige (2006)
-- Shutter Island (2010)
-- The Game (1997)
-- Primer (2004)
-- Coherence (2013)
+- The Lord of the Rings: The Two Towers (2002)
+- WALL·E (2008)
+- Drive My Car (2021)
+- Dogville (2003)
+- Memories of Matsuko (2006)
 
-**Dominant Genres**: Thriller, Sci-Fi, Mystery  
-**Key Themes**: Mind Games, Reality, Deception
+**Size**: 30 films  
+**Dominant Genres**: Drama (67%), Crime (30%), Thriller (27%)  
+**Key Themes**: Violence and transgression, Humanity and the world, Surreal visions
 
 ---
 
-### **Cluster 44: Natural World and Survival**
-Films exploring humanity's relationship with nature and survival.
+### **Cluster 58: Heroic Battles Against Darkness**
+Relationship dramas with family themes.
 
 **Representative Films**:
-- The Revenant (2015)
-- Into the Wild (2007)
-- The Grey (2011)
-- Cast Away (2000)
-- 127 Hours (2010)
+- The Dark Knight (2008)
+- A Man Escaped (1956)
+- Song of the Sea (2014)
+- The Fall (2006)
+- Aftersun (2022)
 
-**Dominant Genres**: Adventure, Drama, Thriller  
-**Key Themes**: Survival, Nature, Endurance
+**Size**: 62 films  
+**Dominant Genres**: Drama (69%), Romance (24%), Thriller (21%)  
+**Key Themes**: Moving relationship stories, Humanity and the world, Family stories
 
 ---
 
-### **Cluster 45: Ensemble Character Studies**
-Multi-character narratives weaving interconnected stories.
+### **Cluster 59: Political and Historical Documentaries**
+Dramas exploring family and suffering.
 
 **Representative Films**:
-- Magnolia (1999)
-- Short Cuts (1993)
-- Crash (2004)
-- Nashville (1975)
-- Babel (2006)
+- Shame (1968)
+- The Second Mother (2015)
+- Nine Queens (2000)
+- Downfall (2004)
+- Oasis (2002)
 
-**Dominant Genres**: Drama  
-**Key Themes**: Connection, Fate, Humanity
-
----
-
-### **Cluster 46: Sports and Triumph**
-Inspirational sports films about determination and victory.
-
-**Representative Films**:
-- Rocky (1976)
-- Raging Bull (1980)
-- Hoosiers (1986)
-- Moneyball (2011)
-- Rush (2013)
-
-**Dominant Genres**: Drama, Sports, Biography  
-**Key Themes**: Sports, Determination, Victory
-
----
-
-### **Cluster 47: High School Social Dynamics**
-Teen dramas exploring cliques, identity, and social hierarchy.
-
-**Representative Films**:
-- Mean Girls (2004)
-- Heathers (1988)
-- Election (1999)
-- Easy A (2010)
-- The Edge of Seventeen (2016)
-
-**Dominant Genres**: Comedy, Drama  
-**Key Themes**: High School, Identity, Social Life
-
----
-
-### **Cluster 48: Creature Features and Monster Movies**
-Horror and sci-fi films featuring iconic monsters and creatures.
-
-**Representative Films**:
-- Alien (1979)
-- The Thing (1982)
-- Jaws (1975)
-- Godzilla (1954)
-- Cloverfield (2008)
-
-**Dominant Genres**: Horror, Sci-Fi, Thriller  
-**Key Themes**: Monsters, Fear, Survival
-
----
-
-### **Cluster 49: Heist Masterminds**
-Clever heist films featuring intricate plans and unexpected twists.
-
-**Representative Films**:
-- Ocean's Eleven (2001)
-- The Italian Job (1969)
-- Rififi (1955)
-- Inside Man (2006)
-- Logan Lucky (2017)
-
-**Dominant Genres**: Crime, Thriller, Comedy  
-**Key Themes**: Heist, Planning, Teamwork
-
----
-
-### **Cluster 50: Biographical Historical Dramas**
-True stories of historical figures and events.
-
-**Representative Films**:
-- Gandhi (1982)
-- Lincoln (2012)
-- The King's Speech (2010)
-- The Social Network (2010)
-- Spotlight (2015)
-
-**Dominant Genres**: Biography, Drama, History  
-**Key Themes**: History, Leadership, Truth
-
----
-
-### **Cluster 51: Dystopian Futures**
-Science fiction exploring dark visions of humanity's future.
-
-**Representative Films**:
-- Children of Men (2006)
-- A Clockwork Orange (1971)
-- Brazil (1985)
-- Blade Runner (1982)
-- The Road (2009)
-
-**Dominant Genres**: Sci-Fi, Drama, Thriller  
-**Key Themes**: Dystopia, Society, Control
-
----
-
-### **Cluster 52: Family Dysfunction and Healing**
-Dramedies about dysfunctional families finding connection.
-
-**Representative Films**:
-- Little Miss Sunshine (2006)
-- The Royal Tenenbaums (2001)
-- August: Osage County (2013)
-- The Descendants (2011)
-- The Squid and the Whale (2005)
-
-**Dominant Genres**: Drama, Comedy  
-**Key Themes**: Family, Dysfunction, Reconciliation
-
----
-
-### **Cluster 53: Gothic Horror and Atmosphere**
-Atmospheric horror films with gothic aesthetics and dread.
-
-**Representative Films**:
-- Crimson Peak (2015)
-- The Others (2001)
-- The Innocents (1961)
-- The Orphanage (2007)
-- The Woman in Black (2012)
-
-**Dominant Genres**: Horror, Thriller, Mystery  
-**Key Themes**: Gothic, Haunting, Atmosphere
-
----
-
-### **Cluster 54: Workplace Satire**
-Comedies and dramas satirizing corporate culture and work life.
-
-**Representative Films**:
-- Office Space (1999)
-- The Apartment (1960)
-- Sorry to Bother You (2018)
-- Horrible Bosses (2011)
-- Clockwatchers (1997)
-
-**Dominant Genres**: Comedy, Drama  
-**Key Themes**: Work, Satire, Corporate Life
-
----
-
-### **Cluster 55: Revenge Thrillers**
-Intense thrillers driven by vengeance and moral complexity.
-
-**Representative Films**:
-- Blue Ruin (2013)
-- I Saw the Devil (2010)
-- The Count of Monte Cristo (2002)
-- Lady Vengeance (2005)
-- Death Wish (1974)
-
-**Dominant Genres**: Thriller, Crime, Action  
-**Key Themes**: Revenge, Justice, Violence
-
----
-
-### **Cluster 56: Urban Life and Culture**
-Films celebrating or critiquing urban environments and city life.
-
-**Representative Films**:
-- Do the Right Thing (1989)
-- Saturday Night Fever (1977)
-- Kids (1995)
-- Boyz n the Hood (1991)
-- Juice (1992)
-
-**Dominant Genres**: Drama  
-**Key Themes**: Urban Life, Culture, Community
-
----
-
-### **Cluster 57: Supernatural Thrillers**
-Horror-thrillers featuring ghosts, demons, and paranormal phenomena.
-
-**Representative Films**:
-- The Sixth Sense (1999)
-- The Conjuring (2013)
-- Poltergeist (1982)
-- Insidious (2010)
-- It Follows (2014)
-
-**Dominant Genres**: Horror, Thriller, Mystery  
-**Key Themes**: Supernatural, Ghosts, Fear
-
----
-
-### **Cluster 58: Period Romance**
-Historical romances set against sweeping backdrops.
-
-**Representative Films**:
-- Pride and Prejudice (2005)
-- Jane Eyre (2011)
-- Sense and Sensibility (1995)
-- Far from the Madding Crowd (2015)
-- The Age of Adaline (2015)
-
-**Dominant Genres**: Romance, Drama, History  
-**Key Themes**: Love, Period Drama, Society
-
----
-
-### **Cluster 59: Slasher Horror**
-Horror films featuring masked killers and teen victims.
-
-**Representative Films**:
-- Halloween (1978)
-- Scream (1996)
-- A Nightmare on Elm Street (1984)
-- Friday the 13th (1980)
-- The Texas Chain Saw Massacre (1974)
-
-**Dominant Genres**: Horror, Thriller  
-**Key Themes**: Slasher, Terror, Survival
+**Size**: 45 films  
+**Dominant Genres**: Drama (58%), Comedy (27%), Thriller (27%)  
+**Key Themes**: Moving relationship stories, Family stories, Heartbreak and suffering
 
 ---
 
 ## Methodology
 
-### **Step 1: Content Feature Extraction**
-```python
-content_matrix = [
-    genres (27 features)     # Drama, Thriller, Comedy, etc.
-    + themes (15 features)   # Love, War, Justice, etc.
-    + tags (160 features)    # atmospheric, mind-bending, etc.
-] → 202 total features
+### **Content Feature Extraction**
+```
+202 total features = 27 genres + 15 themes + 160 filtered tags
 ```
 
-### **Step 2: L2 Normalization**
-```python
-content_norm = normalize(content_matrix, norm='l2')
-# Prepares for cosine-based clustering
-```
-
-### **Step 3: MiniBatchKMeans Clustering**
+### **Clustering Algorithm**
 ```python
 kmeans = MiniBatchKMeans(
     n_clusters=60,
@@ -949,81 +1025,12 @@ kmeans = MiniBatchKMeans(
 )
 ```
 
-### **Step 4: Manual Labeling**
-For each cluster:
-1. Identify top 10 highest-rated films
-2. Analyze genre distribution (most common genres)
-3. Extract recurring themes from descriptions
-4. Review tag patterns
-5. Create evocative, descriptive label
-
----
-
-## Statistics
-
-### **Cluster Size Distribution**
-```
-Mean:     72 films
-Median:   68 films
-Min:      12 films (Cluster 58: Period Romance)
-Max:      156 films (Cluster 13: Profound Human Dramas)
-Std Dev:  24 films
-```
-
-### **Genre Purity**
-Average percentage of top genre within each cluster:
-```
-Mean:     62%
-Median:   67%
-Range:    34% - 98%
-```
-
-### **Cluster Quality Metrics**
-```
-Silhouette Score:        0.115
-Davies-Bouldin Index:    15.2
-Calinski-Harabasz:       1.0
-```
-
-**Note**: Low scores are expected and acceptable for movie clustering due to natural genre overlap (e.g., "Inception" belongs to both Sci-Fi and Thriller clusters).
-
----
-
-## Usage in Recommendation System
-
-Clusters serve multiple purposes:
-
-1. **Diversity Control**: Maximum 3 films per cluster in recommendations
-2. **Taste Mapping**: 2D visualization shows user's cluster preferences
-3. **Similar Film Discovery**: Backend finds films from same/adjacent clusters
-4. **Search-to-Rate**: Initial 5 films selected from top clusters near searched film
-5. **Exploration**: Users can click cluster labels to browse all films in category
-
----
-
-## Future Refinements
-
-- **Sub-clustering**: Split largest clusters (e.g., Cluster 13) into finer categories
-- **Temporal clusters**: Separate by era (e.g., "Classic Noir" vs "Neo-Noir")
-- **Director clusters**: Group by auteur (e.g., "Nolan Sci-Fi" vs "Villeneuve Sci-Fi")
-- **A/B testing**: Compare 60 vs 40 vs 80 clusters for recommendation quality
-
----
-
-## Citation
-
-When referencing this taxonomy:
-
-```
-Film Cluster Taxonomy (2025)
-60-cluster semantic categorization via content-based clustering
-Source: Hybrid Movie Recommender System
-Method: MiniBatchKMeans on 202-dimensional content features
-```
+### **Manual Labeling**
+Cluster names were created independently and don't always reflect algorithmic groupings. The clustering identifies films with similar feature patterns, which sometimes produces unexpected but valid groupings (e.g., "Human Passion and Artistic Struggle" containing both Ran and Das Boot).
 
 ---
 
 **Last Updated**: March 2025  
-**Total Films**: 4,305  
-**Total Clusters**: 60  
-**Methodology**: Content-based clustering + manual curation
+**Dataset**: 4,305 films  
+**Clustering**: MiniBatchKMeans (k=60)  
+**Features**: 202-dimensional content vectors
