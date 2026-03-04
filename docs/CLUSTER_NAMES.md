@@ -11,7 +11,7 @@ A curated semantic taxonomy of 60 film clusters derived from content-based analy
 **Silhouette Score**: 0.115 (low but semantically meaningful)  
 **Average Cluster Size**: 72 films  
 
-**Note**: Cluster names were manually created and may not perfectly align with algorithmic groupings. The content-based clustering identifies films with similar genre/theme/tag patterns, which sometimes produces unexpected but semantically coherent groupings.
+**Note**: Cluster names were created using LLM's and may not perfectly align with algorithmic groupings. The content-based clustering identifies films with similar genre/theme/tag patterns, which sometimes produces unexpected but semantically coherent groupings.
 
 ---
 
