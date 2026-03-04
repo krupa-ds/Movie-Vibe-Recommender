@@ -590,8 +590,8 @@ Some users may see too many films at origin (0,0) if films aren't in the trainin
 
 ## 👨‍💻 Author
 
-**Mateusz Krupaduex**  
-[GitHub](https://github.com/krupaduex) • [LinkedIn](https://linkedin.com/in/krupaduex)
+**Matthew Krupa**  
+[GitHub](https://github.com/krupa-ds) • [LinkedIn](www.linkedin.com/in/matthew-krupa-aus)
 
 ---
 
@@ -612,7 +612,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📊 Stats
 
-![GitHub stars](https://img.shields.io/github/stars/krupaduex/movie-recommender?style=social)
-![GitHub forks](https://img.shields.io/github/forks/krupaduex/movie-recommender?style=social)
+![GitHub stars](https://img.shields.io/github/stars/krupa-ds/movie-recommender?style=social)
+![GitHub forks](https://img.shields.io/github/forks/krupa-ds/movie-recommender?style=social)
 ![Python](https://img.shields.io/badge/python-3.10+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
