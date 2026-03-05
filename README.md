@@ -525,22 +525,14 @@ The visualization shows how the constraint distributes recommendations evenly ac
 
 ## 📈 Future Improvements
 
-### **1. Director/Actor Embeddings**
-Add cast/crew similarity:
-```python
-director_features = encode_directors(film['director'])
-actor_features = encode_actors(film['cast'])
-content_enhanced = np.hstack([content_matrix, director_features, actor_features])
-```
-
-### **2. Temporal Weighting**
+### **1. Temporal Weighting**
 Weight recent ratings higher:
 ```python
 time_decay = np.exp(-age_in_days / 365)  # 1-year half-life
 weighted_rating = rating * time_decay
 ```
 
-### **3. Neural Collaborative Filtering**
+### **2. Neural Collaborative Filtering**
 Replace SVD with neural network:
 ```python
 user_embedding = Embedding(n_users, 128)(user_input)
@@ -548,21 +540,6 @@ item_embedding = Embedding(n_items, 128)(item_input)
 interaction = Dot()([user_embedding, item_embedding])
 prediction = Dense(1, activation='linear')(interaction)
 ```
-
-### **4. UMAP Instead of t-SNE**
-Faster (3x) and supports incremental updates:
-```python
-reducer = umap.UMAP(n_components=2, n_neighbors=15, min_dist=0.1)
-coords_2d = reducer.fit_transform(content_norm)
-
-# Later: add new film without retraining
-new_coords = reducer.transform(new_film_features)
-```
-
-### **5. A/B Testing**
-- 20 vs 60 clusters
-- Content 70/30 vs 50/50 weighting
-- Different diversity constraints
 
 ---
 
@@ -576,15 +553,6 @@ Clustering silhouette of 0.115 is low by standards, but acceptable for movies du
 
 ### **Taste Map Density**
 Some users may see too many films at origin (0,0) if films aren't in the training set. Mitigated by ensuring all displayed films have valid coordinates.
-
----
-
-## 📚 References
-
-- **SVD**: [Koren, Y., Bell, R., & Volinsky, C. (2009). Matrix Factorization Techniques for Recommender Systems](https://datajobs.com/data-science-repo/Recommender-Systems-[Netflix].pdf)
-- **t-SNE**: [Van der Maaten, L., & Hinton, G. (2008). Visualizing Data using t-SNE](https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf)
-- **LightGBM**: [Ke, G., et al. (2017). LightGBM: A Highly Efficient Gradient Boosting Decision Tree](https://papers.nips.cc/paper/6907-lightgbm-a-highly-efficient-gradient-boosting-decision-tree.pdf)
-- **UMAP**: [McInnes, L., Healy, J., & Melville, J. (2018). UMAP: Uniform Manifold Approximation and Projection](https://arxiv.org/abs/1802.03426)
 
 ---
 
