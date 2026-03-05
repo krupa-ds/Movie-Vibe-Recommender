@@ -878,25 +878,7 @@ async def recommend_new(request: dict):
 
 1. **Deep learning**: Neural collaborative filtering
 2. **Multi-objective optimization**: Balance accuracy, diversity, novelty
-6. **Active learning**: Adapt cluster boundaries from user feedback
-
----
-
-## Deployment Checklist
-
-- [x] Train SVD (400 components)
-- [x] Build content features (genre + theme + tags)
-- [x] Train KMeans (60 clusters)
-- [x] Train LightGBM hybrid model
-- [x] Generate t-SNE coordinates
-- [x] Create cluster summaries → Manual labeling
-- [x] Build deployment artifacts
-- [x] Implement search-to-rate flow
-- [x] Create taste map visualization (D3.js)
-- [ ] Deploy to production
-- [ ] Monitor recommendation quality
-- [ ] Collect user feedback
-- [ ] Iterate on cluster count/parameters
+3. **Active learning**: Adapt cluster boundaries from user feedback
 
 ---
 
