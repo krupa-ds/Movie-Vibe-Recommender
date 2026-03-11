@@ -4,6 +4,8 @@ A sophisticated movie recommendation engine combining collaborative filtering, c
 
 ![Taste Map Visualization](docs/images/taste_map.png)
 
+[Explore here!](https://movie-vibe-frontend.vercel.app/)
+
 ---
 
 ## 🌟 Features
