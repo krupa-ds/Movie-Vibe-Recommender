@@ -1,4 +1,5 @@
-# 🎬 Hybrid Movie Recommender System
+# And Now, Our Feature Presentation:
+## A Movie Recommender Using Feature-Derived Representations
 
 A sophisticated movie recommendation engine combining collaborative filtering, content-based clustering, and gradient boosting to deliver personalized film suggestions. Features an interactive "taste map" visualization and intelligent search-to-rate onboarding flow.
 
