@@ -572,12 +572,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Letterboxd** for film ratings data
 - **TMDb** for film metadata and posters
-- **Anthropic Claude** for development assistance
-- The open-source community for scikit-learn, LightGBM, D3.js, and FastAPI
 
 ---
 
